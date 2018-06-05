@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Template</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Coiny|Berkshire+Swash|Limelight|Sacramento|Righteous|Poiret+One|Ubuntu|Open+Sans+Condensed:300"
+          rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header>
+    <div class="logo">Enrico Fabio</div>
+    <ul>
+        <li><a href="#intro">Intro</a></li>
+        <li><a href="#wie">Wie?</a></li>
+        <li><a href="#wat">Wat?</a></li>
+        <li><a href="#mywork">Projecten</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</header>
+
+<main>
+    <div class="container">
+
+        <div class="content one" id="intro">
+
+            <h1>Hey.</h1>
+            <p>Welkom!. Dit is de portfolio van Enrico Fabio.</p>
+
+            <a href="#wie">
+                <div class="next-button">
+                    <img src="images/arrow-down.png">
+                </div>
+            </a>
+
+        </div>
+
+        <div class="content two" id="wie">
+
+            <div class="content-info">
+                <h2>Wie ben ik?</h2>
+                <p>Mijn naam is Enrico Fabio en ik ben een student bij Techniek College Rotterdam. Ik ben 22 jaar oud en
+                    vind de ICT industrie zeer interessant.
+                    Mijn passie ligt bij het maken van goed ogende websites. Ik zou ook graag willen leren om
+                    applicaties te maken. </p>
+            </div>
+
+            <a href="#wat">
+            <div class="next-button">
+                <img src="images/arrow-down.png">
+            </div>
+            </a>
+
+        </div>
+
+        <div class="content three" id="wat">
+
+            <div class="content-info">
+                <h2>Wat doe ik?</h2>
+                <p>Op het moment werk ik veel aan het designen van websites d.m.v. Javascript, CSS, HTML en PHP. Van
+                    simpele wordpress sites naar uitgebreide lange one scrollers, Ik vind het allemaal leuk en werk elke
+                    dag eraan om mijzelf uit te dagen om meer te leren.</p>
+            </div>
+
+            <a href="#mywork">
+            <div class="next-button">
+                <img src="images/arrow-down.png">
+            </div>
+            </a>
+
+        </div>
+
+        <div class="content mywork" id="mywork">
+
+            <h2>Mijn Werk</h2>
+            <p>Dit zijn allemaal projecten waar ik heb aan gewerkt in de tijd dat ik op deze school zit (01-09-2017 t/m
+                heden)</p>
+            <div class="gallery-container">
+
+                <!--First images row-->
+                <div class="imgrow-1">
+                    <div class="imgbox">
+                        <img src="images/wrapper.jpg">
+                    </div>
+                    <div class="imgbox">
+                        <img src="images/texturize.jpg">
+                    </div>
+                    <div class="imgbox">
+                        <img src="images/clutter.jpg">
+                    </div>
+                </div>
+
+                <!--Second images row-->
+                <div class="imgrow-1">
+                    <div class="imgbox">
+                        <img src="images/floral.jpg">
+                    </div>
+                    <div class="imgbox">
+                        <img src="images/platter.jpg">
+                    </div>
+                    <div class="imgbox">
+                        <img src="images/mountain.jpg">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="content form" id="contact">
+
+            <h2>Stuur mij een bericht!</h2>
+            <p>Heb je vragen? Stuur een bricht via deze form en dan reageer ik zo snel mogelijk!</p>
+            <form action="#" method="post">
+                <div class="combine">
+                    <input class="input-1" type="text" placeholder="Naam">
+                    <input class="input-1" type="email" placeholder="Email">
+                </div>
+                <textarea placeholder="Message..."></textarea>
+                <input class="submit" type="submit">
+            </form>
+        </div>
+
+    </div>
+</main>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Add smooth scrolling to all links
+        $("a").on('click', function (event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 1000, function () {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    });
+</script>
+
+</html>

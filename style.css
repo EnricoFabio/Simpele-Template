@@ -1,0 +1,342 @@
+/*------------------------------BODY*/
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/*-------------------------------HEADER*/
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 100;
+}
+
+.logo {
+    font-family: 'Sacramento', cursive;
+    margin: 0 30px;
+    font-size: 2.5em;
+}
+
+header ul {
+    margin: 20px;
+    padding: 0;
+    list-style-type: none;
+}
+
+header ul li {
+    display: inline-block;
+}
+
+header ul li a {
+    font-family: 'Poiret One', cursive;
+    font-weight: 600;
+    font-size: 1.2em;
+    padding: 5px 10px;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #616161;
+    transition: 400ms color;
+}
+
+header ul li a:hover {
+    color: #ff0067;
+}
+
+/*----------------------------------MAIN*/
+
+.container {
+    color: black;
+    background: url("images/clean-gray-paper.png") fixed;
+}
+
+.content {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.next-button {
+    margin-top: 50px;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    transition: 300ms background-color;
+}
+
+.next-button:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.next-button img {
+    height: 60%;
+}
+
+.content h1 {
+    font-size: 5em;
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+}
+
+.content h2 {
+    font-size: 3em;
+    color: rgb(255, 67, 122);
+    font-family: 'Limelight', cursive;
+}
+
+p {
+    font-size: 1.3em;
+    line-height: 1.618;
+    width: 90%;
+    font-family: 'Poiret One', cursive;
+    font-weight: 500;
+}
+
+.content-info{
+    position: relative;
+    width: 40%;
+    padding: 2em;
+    background-color: white;
+    /*right: -700px;*/
+}
+
+.one {
+    background: linear-gradient(rgba(0, 133, 255, 0.2), rgba(165, 0, 107, 0.2)) fixed;
+    text-align: center;
+}
+
+.two {
+    background: linear-gradient(rgba(199, 0, 255, 0.2), rgba(165, 95, 0, 0.2)) fixed;
+}
+
+.three {
+    background: linear-gradient(rgba(38, 170, 255, 0.21), rgba(0, 49, 165, 0.2)) fixed;
+}
+
+.mywork {
+    text-align: center;
+    color: black;
+    background-color: white;
+}
+
+/*---------------------------------------Gallery*/
+
+.gallery-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.imgbox{
+    height: 250px;
+    width: 450px;
+}
+
+.imgbox img{
+    width: 100%;
+    height: 100%;
+}
+
+/*---------------------------------------FORM*/
+
+::placeholder{
+    color: #b6b6b6;
+}
+
+.form {
+    text-align: center;
+    color: #001751;
+    background-color: #f0f0f0;
+}
+
+form{
+    padding: 2em;
+    width: 50%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.combine{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.input-1{
+    margin: auto 1em;
+    padding: 0.3em;
+    font-size: 1.5em;
+    width: 50%;
+    border-radius: 10px;
+    border: 2px solid #e9e9e9;
+    outline: none;
+    font-weight: 300;
+    font-family: 'Open Sans Condensed', sans-serif;
+    transition: 300ms border;
+}
+
+.input-1:focus{
+    border: 2px solid #c6c6c6;
+}
+
+textarea{
+    height: 30vh;
+    padding: 0.3em;
+    margin: 1em;
+    border-radius: 10px;
+    font-size: 1.5em;
+    border: 2px solid #e9e9e9;
+    outline: none;
+    transition: 300ms border;
+    font-weight: 300;
+    font-family: 'Open Sans Condensed', sans-serif;
+    resize: none;
+}
+
+textarea:focus{
+    border: 2px solid #c6c6c6;
+}
+
+.submit{
+    color: white;
+    padding: 0.5em;
+    width: 20%;
+    font-size: 1.5em;
+    margin: 0 auto;
+    background-color: rgba(255, 3, 74, 0.51);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    transition: 300ms background-color;
+}
+
+.submit:hover{
+    background-color: #ff0067;
+}
+
+/*----------------------------------------------------------MEDIAQUERY*/
+
+@media screen and (max-width: 480px) {
+
+    /*---------------------------HEADER*/
+
+    header{
+        display: none;
+    }
+
+    /*----------------------------MAIN*/
+
+    .content{
+        padding: 4.5em 0;
+        min-height: 10vh;
+        /*height: 60vh;*/
+    }
+
+    .content h1{
+        font-size: 3.5em;
+        margin-bottom: 0;
+    }
+
+    .content h2 {
+        font-size: 1.5em;
+    }
+
+    p{
+        font-size: 1.2em;
+        line-height: 1.2;
+    }
+
+    .content-info{
+        text-align: center;
+        position: relative;
+        width: 85%;
+        padding: 1em;
+    }
+
+    .two .next-button{
+        display: none;
+    }
+    .three .next-button{
+        display: none;
+    }
+
+    /*----------------------------------Gallery*/
+
+    .imgbox{
+        display: none;
+    }
+
+    /*-----------------------------------FORM*/
+
+    form{
+        padding: 0.8em;
+        width: 85%;
+        font-size: 1em;
+    }
+
+    .input-1{
+        margin: 0.1em;
+        padding: 0.3em;
+        width: auto;
+    }
+
+    .combine{
+        display: flex;
+        flex-direction: column;
+        justify-content: normal;
+    }
+
+    textarea{
+        height: 25vh;
+        padding: 0.3em;
+        margin: 0.1em;
+    }
+
+    .submit{
+        padding: 0.5em;
+        width: 40%;
+        margin: 0.5em auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*@media screen and (min-width: 481px) and (max-width: 960px) {*/
+
+    /*!*---------------------------HEADER*!*/
+
+    /*header{*/
+        /*display: none;*/
+    /*}*/
+
+/*}*/
